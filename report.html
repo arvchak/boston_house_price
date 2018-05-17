@@ -12467,10 +12467,8 @@ Based on the model complexity graph until max depth 4 the variation between the 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>
-The grid search technique allows one to define a grid of parameters that will be searched using K-fold cross-validation.
-Importantly, the grid search technique exhaustively tries every combination of the provided hyper-parameter values in order to find the best model.
-One can then find the highest cross-validation accuracy that matches with the corresponding parameters that optimizes the learning algorithm</p>
+<p><strong>Answer: </strong></p>
+<p>The grid search is an algorithm that will prepare a table of all possibities of the hyperparams and the possible values combinations and then picks the combination with the high value or close to 1. The grid search is performed in order to tune the hyperparameters of a model.</p>
 
 </div>
 </div>
@@ -12496,13 +12494,8 @@ One can then find the highest cross-validation accuracy that matches with the co
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<ol>
-<li><p>The Dataset is split into K "folds" of equal size.Each fold acts as the testing set 1 time, and acts as the training set K-1 times.Average testing performance is used as the estimate of out-of-sample performance.Also known as cross-validated performance.</p>
-</li>
-<li><p>Benefits of k-fold cross-validation:
- More reliable estimate of out-of-sample performance than train/test split.Reduce the variance of a single trial of a train/test split.Hence, with the benefits of k-fold cross-validation, we're able to use the average testing accuracy as a benchmark to decide which is the most optimal set of parameters for the learning algorithm.</p>
-</li>
-</ol>
+<p>The risk of grid search while fitting the model to a "Overfitting the test set." which is not desired, this usually happens as a side effect of tweaking the performance.To resolve this we can use a validation set instead of a testing set. Where in the training is done on the training set and then  validated against the validation set and then finally applied to the testing set. The overhead of this approach is that we will reduce the sample data drastically.</p>
+<p>To fix this problem, we use the technique of K-fold cross validation, where the training set is split into k folds or K- buckets and then a model is picked and trained against K-1 buckets. The resulting data is then used as a test data to validate against rest of the data.</p>
 
 </div>
 </div>
